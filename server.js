@@ -1,10 +1,12 @@
 const express = require('express')
+const cors =require('cors')
 const path = require('path')
 const app = express()
 const {bots, playerRecord} = require('./data')
 const {shuffleArray} = require('./utils')
 
 app.use(express.json())
+app.use(cors())
 
 // include and initialize the rollbar library with your access token
 var Rollbar = require('rollbar')
